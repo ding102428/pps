@@ -1,7 +1,7 @@
 package com.example.demo10.dao;
 
 
-import com.example.demo10.doim.User;
+import com.example.demo10.domin.User;
 
 import java.util.List;
 
