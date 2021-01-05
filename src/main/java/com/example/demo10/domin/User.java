@@ -15,7 +15,7 @@ public class User {
     private Timestamp uRegDate;
     private int uPoint;
 
-    public User() {
+    public User(int i, String 老师, int i1, String s, String s1, boolean b, int i2, Timestamp timestamp) {
     }
 
     public User(int uId, String uName, String uPassword, String uEmail, Date uBirthday, boolean uSex, int uClass, String ustatement, Timestamp uRegDate, int uPoint) {
