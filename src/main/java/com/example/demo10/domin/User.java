@@ -4,21 +4,33 @@ import java.sql.Date;
 import java.sql.Timestamp;
 
 public class User {
-    private int uId;
+    private Integer uId;
     private String uName;
     private String uPassword;
     private String uEmail;
     private Date  uBirthday;
     private boolean uSex;
-    private  int uClass;
-    private String ustatement;
+    private  Integer uClass;
+    private String uStatement;
     private Timestamp uRegDate;
-    private int uPoint;
+    private Integer uPoint;
 
     public User() {
     }
 
-    public User(int uId, String uName, String uPassword, String uEmail, Date uBirthday, boolean uSex, int uClass, String ustatement, Timestamp uRegDate, int uPoint) {
+    public User(String uName, String uPassword, String uEmail, Date uBirthday, boolean uSex, int uClass, String uStatement, Timestamp uRegDate, int uPoint) {
+        this.uName = uName;
+        this.uPassword = uPassword;
+        this.uEmail = uEmail;
+        this.uBirthday = uBirthday;
+        this.uSex = uSex;
+        this.uClass = uClass;
+        this.uStatement = uStatement;
+        this.uRegDate = uRegDate;
+        this.uPoint = uPoint;
+    }
+
+    public User(int uId, String uName, String uPassword, String uEmail, Date uBirthday, boolean uSex, int uClass, String uStatement, Timestamp uRegDate, int uPoint) {
         this.uId = uId;
         this.uName = uName;
         this.uPassword = uPassword;
@@ -26,7 +38,7 @@ public class User {
         this.uBirthday = uBirthday;
         this.uSex = uSex;
         this.uClass = uClass;
-        this.ustatement = ustatement;
+        this.uStatement = uStatement;
         this.uRegDate = uRegDate;
         this.uPoint = uPoint;
     }
@@ -87,12 +99,12 @@ public class User {
         this.uClass = uClass;
     }
 
-    public String getUstatement() {
-        return ustatement;
+    public String getuStatement() {
+        return uStatement;
     }
 
-    public void setUstatement(String ustatement) {
-        this.ustatement = ustatement;
+    public void setuStatement(String uStatement) {
+        this.uStatement = uStatement;
     }
 
     public Timestamp getuRegDate() {
@@ -121,7 +133,7 @@ public class User {
                 ", uBirthday=" + uBirthday +
                 ", uSex=" + uSex +
                 ", uClass=" + uClass +
-                ", ustatement='" + ustatement + '\'' +
+                ", uStatement='" + uStatement + '\'' +
                 ", uRegDate=" + uRegDate +
                 ", uPoint=" + uPoint +
                 '}';

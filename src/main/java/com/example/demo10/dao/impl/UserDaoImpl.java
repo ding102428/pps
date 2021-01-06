@@ -17,7 +17,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
                 user.getuBirthday(),
                 user.isuSex(),
                 user.getuClass(),
-                user.getUstatement(),
+                user.getuStatement(),
                 user.getuRegDate(),
                 user.getuPoint()
                 );
@@ -25,6 +25,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
     @Override
     public List<User> findAll(User user) {
+
         return null;
     }
 }
