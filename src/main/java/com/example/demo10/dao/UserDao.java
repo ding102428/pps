@@ -8,4 +8,5 @@ import java.util.List;
 public interface UserDao {
     int addAll (User user);
     List<User> findAll(User user);
+    String userAllEmail(String email);
 }
