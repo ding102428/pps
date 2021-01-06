@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+        div
+        {
+           text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <form action="signIn" method="post">
+        <b>姓名:</b><input name="name"> <br>
+        <b>邮箱:</b><input name="email"> <br>
+        <b>密码:</b><input name="password" type="password"> <br>
+        <b>出生日期:</b><input name="birthday" type="date"> <br>
+        <b>性别:</b>
+        男<input type="radio" name="sex" value="F" onclick="show();">　　
+        女<input type="radio" name="sex" value="M" checked onclick="hidd();"><br>
+        <input type="submit" value="注册"> <br>
+    </form>
+</div>
+</body>
+</html>
