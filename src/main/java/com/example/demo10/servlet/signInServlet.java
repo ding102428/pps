@@ -19,7 +19,7 @@ public class signInServlet extends HttpServlet {
     SignInService signInService = new SignInServiceImpl();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String uName = req.getParameter("name");
         String uEmail = req.getParameter("email");
         String uPassword = req.getParameter("password");
@@ -30,7 +30,9 @@ public class signInServlet extends HttpServlet {
         Timestamp uRegDate = Timestamp.valueOf("regDate");
         int uPoint=Integer.parseInt(req.getParameter("point"));
         User user=new User(uName,uPassword,uBirthday,uSex,uClass,uStatement,uRegDate,uPoint);
+
         if (signInService.signIn(user,uEmail)==true){
+            //跳转index页面,注册
             resp.sendRedirect("index.html");
         }else {
             req.getRequestDispatcher("error.jsp").forward(req,resp);
