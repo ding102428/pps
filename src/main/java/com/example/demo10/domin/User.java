@@ -9,7 +9,7 @@ public class User {
     private String uPassword;
     private String uEmail;
     private Date  uBirthday;
-    private boolean uSex;
+    private Sex uSex;
     private  Integer uClass;
     private String uStatement;
     private Timestamp uRegDate;
@@ -18,19 +18,7 @@ public class User {
     public User() {
     }
 
-    public User(String uName, String uPassword, String uEmail, Date uBirthday, boolean uSex, int uClass, String uStatement, Timestamp uRegDate, int uPoint) {
-        this.uName = uName;
-        this.uPassword = uPassword;
-        this.uEmail = uEmail;
-        this.uBirthday = uBirthday;
-        this.uSex = uSex;
-        this.uClass = uClass;
-        this.uStatement = uStatement;
-        this.uRegDate = uRegDate;
-        this.uPoint = uPoint;
-    }
-
-    public User(int uId, String uName, String uPassword, String uEmail, Date uBirthday, boolean uSex, int uClass, String uStatement, Timestamp uRegDate, int uPoint) {
+    public User(Integer uId, String uName, String uPassword, String uEmail, Date uBirthday, Sex uSex, Integer uClass, String uStatement, Timestamp uRegDate, Integer uPoint) {
         this.uId = uId;
         this.uName = uName;
         this.uPassword = uPassword;
@@ -43,11 +31,34 @@ public class User {
         this.uPoint = uPoint;
     }
 
-    public int getuId() {
+    public User(String uName, String uPassword, String uEmail, Date uBirthday, Sex uSex, Integer uClass, String uStatement, Timestamp uRegDate, Integer uPoint) {
+        this.uName = uName;
+        this.uPassword = uPassword;
+        this.uEmail = uEmail;
+        this.uBirthday = uBirthday;
+        this.uSex = uSex;
+        this.uClass = uClass;
+        this.uStatement = uStatement;
+        this.uRegDate = uRegDate;
+        this.uPoint = uPoint;
+    }
+
+    public User(String uName, String uPassword, Date uBirthday, Sex uSex, Integer uClass, String uStatement, Timestamp uRegDate, Integer uPoint) {
+        this.uName = uName;
+        this.uPassword = uPassword;
+        this.uBirthday = uBirthday;
+        this.uSex = uSex;
+        this.uClass = uClass;
+        this.uStatement = uStatement;
+        this.uRegDate = uRegDate;
+        this.uPoint = uPoint;
+    }
+
+    public Integer getuId() {
         return uId;
     }
 
-    public void setuId(int uId) {
+    public void setuId(Integer uId) {
         this.uId = uId;
     }
 
@@ -83,19 +94,19 @@ public class User {
         this.uBirthday = uBirthday;
     }
 
-    public boolean isuSex() {
+    public Sex getuSex() {
         return uSex;
     }
 
-    public void setuSex(boolean uSex) {
+    public void setuSex(Sex uSex) {
         this.uSex = uSex;
     }
 
-    public int getuClass() {
+    public Integer getuClass() {
         return uClass;
     }
 
-    public void setuClass(int uClass) {
+    public void setuClass(Integer uClass) {
         this.uClass = uClass;
     }
 
@@ -115,11 +126,11 @@ public class User {
         this.uRegDate = uRegDate;
     }
 
-    public int getuPoint() {
+    public Integer getuPoint() {
         return uPoint;
     }
 
-    public void setuPoint(int uPoint) {
+    public void setuPoint(Integer uPoint) {
         this.uPoint = uPoint;
     }
 
